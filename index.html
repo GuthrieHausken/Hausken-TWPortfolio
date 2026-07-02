@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <main>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <main id="main-content">
         <header class="hero">
             <div class="header-inner">
                 <!-- Uses CSS grid to place the circular profile image beside the hero text. -->
@@ -20,18 +21,18 @@
                     <p class="eyebrow">Technical writing • editing • documentation</p>
                     <h1>Guthrie Hausken</h1>
                     <p class="tagline">Recent English graduate and technical writing student. Documentation system gremlin.</p>
-                    <div class="hero-actions" aria-label="Portfolio sections">
-                        <button class="tab-btn active" type="button" data-tab="overview" aria-selected="true">Overview</button>
-                        <button class="tab-btn" type="button" data-tab="writing" aria-selected="false">Portfolio</button>
-                        <button class="tab-btn" type="button" data-tab="contact" aria-selected="false">Contact</button>
-                        <button class="tab-btn" type="button" data-tab="cv" aria-selected="false">CV</button>
-                        <button class="tab-btn" type="button" data-tab="other-works" aria-selected="false">Other works</button>
+                    <div class="hero-actions" role="tablist" aria-label="Portfolio sections">
+                        <button class="tab-btn active" type="button" data-tab="overview" id="overview-tab" role="tab" aria-controls="overview" aria-selected="true" tabindex="0">Overview</button>
+                        <button class="tab-btn" type="button" data-tab="writing" id="writing-tab" role="tab" aria-controls="writing" aria-selected="false" tabindex="-1">Portfolio</button>
+                        <button class="tab-btn" type="button" data-tab="contact" id="contact-tab" role="tab" aria-controls="contact" aria-selected="false" tabindex="-1">Contact</button>
+                        <button class="tab-btn" type="button" data-tab="cv" id="cv-tab" role="tab" aria-controls="cv" aria-selected="false" tabindex="-1">CV</button>
+                        <button class="tab-btn" type="button" data-tab="other-works" id="other-works-tab" role="tab" aria-controls="other-works" aria-selected="false" tabindex="-1">Other works</button>
                     </div>
                 </div>
             </div>
         </header>
 
-        <section id="overview" class="tab-panel active" role="tabpanel" aria-labelledby="overview-tab">
+        <section id="overview" class="tab-panel active" role="tabpanel" aria-labelledby="overview-tab" tabindex="0">
             <div class="panel-intro">
                 <!-- Defines the initial tab panel and gives it the active state so it appears on first load. -->
                 <h2>Overview</h2>
@@ -69,7 +70,7 @@
             </div>
         </section>
 
-        <section id="writing" class="tab-panel" role="tabpanel" aria-labelledby="writing-tab" hidden>
+        <section id="writing" class="tab-panel" role="tabpanel" aria-labelledby="writing-tab" tabindex="0" hidden>
             <div class="panel-intro">
                 <!-- Uses a responsive grid to lay out the writing sample cards and their action buttons. -->
                 <h2>Writing &amp; documents</h2>
@@ -140,7 +141,7 @@
             </div>
         </section>
 
-        <section id="cv" class="tab-panel" role="tabpanel" aria-labelledby="cv-tab" hidden>
+        <section id="cv" class="tab-panel" role="tabpanel" aria-labelledby="cv-tab" tabindex="0" hidden>
             <div class="panel-intro">
                 <!-- Renders the CV in a document-like panel with grouped sections for experience, education, and skills. -->
                 <h2>Curriculum Vitae</h2>
@@ -251,7 +252,7 @@
             </article>
         </section>
 
-        <section id="contact" class="tab-panel" role="tabpanel" aria-labelledby="contact-tab" hidden>
+        <section id="contact" class="tab-panel" role="tabpanel" aria-labelledby="contact-tab" tabindex="0" hidden>
             <div class="panel-intro">
                 <!-- Renders the contact links in a simple card so visitors can reach the main contact points quickly. -->
                 <h2>Contact</h2>
@@ -271,7 +272,7 @@
             </div>
         </section>
 
-        <section id="other-works" class="tab-panel" role="tabpanel" aria-labelledby="other-works-tab" hidden>
+        <section id="other-works" class="tab-panel" role="tabpanel" aria-labelledby="other-works-tab" tabindex="0" hidden>
             <div class="panel-intro">
                 <h2>Other works</h2>
                 <p>Additional projects, posters, and visual work that complement the main portfolio samples.</p>
@@ -328,6 +329,7 @@
                 const isActive = button.getAttribute('data-tab') === targetId;
                 button.classList.toggle('active', isActive);
                 button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+                button.tabIndex = isActive ? 0 : -1;
             });
 
             tabPanels.forEach((panel) => {
@@ -337,10 +339,39 @@
             });
         }
 
-        tabButtons.forEach((button) => {
+        tabButtons.forEach((button, index) => {
             button.addEventListener('click', () => {
                 const targetId = button.getAttribute('data-tab');
                 setActiveTab(targetId);
+            });
+
+            button.addEventListener('keydown', (event) => {
+                const buttons = Array.from(tabButtons);
+                let nextIndex = index;
+
+                if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+                    event.preventDefault();
+                    nextIndex = (index + 1) % buttons.length;
+                } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+                    event.preventDefault();
+                    nextIndex = (index - 1 + buttons.length) % buttons.length;
+                } else if (event.key === 'Home') {
+                    event.preventDefault();
+                    nextIndex = 0;
+                } else if (event.key === 'End') {
+                    event.preventDefault();
+                    nextIndex = buttons.length - 1;
+                } else if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    setActiveTab(button.getAttribute('data-tab'));
+                    return;
+                } else {
+                    return;
+                }
+
+                const nextButton = buttons[nextIndex];
+                setActiveTab(nextButton.getAttribute('data-tab'));
+                nextButton.focus();
             });
         });
 
