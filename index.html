@@ -4,237 +4,382 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guthrie Hausken - Portfolio</title>
+    <meta name="description" content="Portfolio site for Guthrie Hausken featuring writing samples, editing experience, and a multi-tab layout.">
+    <title>Guthrie Hausken | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="styles.css" rel="stylesheet">
 </head>
 
 <body>
+    <main>
+        <header class="hero">
+            <div class="header-inner">
+                <!-- Uses CSS grid to place the circular profile image beside the hero text. -->
+                <img src="Guthrie Hausken_02.jpg" class="profile-img" alt="Portrait of Guthrie Hausken">
+                <div class="header-text">
+                    <!-- Contains the heading, tagline, and button controls that introduce the portfolio sections. -->
+                    <p class="eyebrow">Technical writing • editing • documentation</p>
+                    <h1>Guthrie Hausken</h1>
+                    <p class="tagline">Recent English graduate and technical writing student. Documentation system gremlin.</p>
+                    <div class="hero-actions" aria-label="Portfolio sections">
+                        <button class="tab-btn active" type="button" data-tab="overview" aria-selected="true">Overview</button>
+                        <button class="tab-btn" type="button" data-tab="writing" aria-selected="false">Portfolio</button>
+                        <button class="tab-btn" type="button" data-tab="contact" aria-selected="false">Contact</button>
+                        <button class="tab-btn" type="button" data-tab="cv" aria-selected="false">CV</button>
+                        <button class="tab-btn" type="button" data-tab="other-works" aria-selected="false">Other works</button>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-    <!-- Header -->
-     <header>
-        <div class=""header-inner">
-            <img src="Guthrie Hausken_02.jpg" class="profile-img">
-            <div class=""header-text">
-                <h1>Guthrie Hausken</h1>
-                <p class=""tagline">Recent English Graduate &amp; Aspiring Technical Writer</p><p></p></p>
-                <hr>
-                <ul class=""contact-list">
-                    <li>
-                        <a href="mailto:guthriehausken@gmail.com" title="Email me!">
-                            ✉ guthriehausken@gmail.com
-                        </a>
-                    </li>
-                    <li>
-                        <a href="tel:+15412242037" title="Call Me!">
-                            ☎ (503) 123-4567
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.linkedin.com/in/guthrie-hausken-1b0534365/" title="LinkedIn Profile" target="_blank">
-                            ⟶ linkedin.com/in/GuthrieHausken
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/GuthrieHausken" title="GitHub Profile" target="_blank">
-                            ⌥ github.com/GuthrieHausken
-                        </a>
-                    </li>
-                </ul>
+        <section id="overview" class="tab-panel active" role="tabpanel" aria-labelledby="overview-tab">
+            <div class="panel-intro">
+                <!-- Defines the initial tab panel and gives it the active state so it appears on first load. -->
+                <h2>Overview</h2>
+                <p>Human-centered documentation, anywhere it's needed.</p>
+            </div>
+
+            <div class="card-grid overview-grid">
+                <!-- Creates a card grid that presents background, education, and strengths as separate content blocks. -->
+                <article class="info-card">
+                    <h3>About</h3>
+                    <p>I'm a recent graduate volunteering as a technical writer for local nonprofits in Portland. Working with nonprofits, I've designed information architecture systems, documented processes, created document template systems, made user guides, instructional videos, and translated city codes and laws into accessible language. I'm especially interested in accessible UX design, sentece-level syntax, and my three cats.</p>
+                    <p>I  graduated Summa Cum Laude from the University of Oregon's English department, and I'm currently a student of technical and professional writing at Oregon State University.</p>
+                    <h3>Mission statement</h3>
+                    <p>I will put this here later.</p>
+                </article>
+
+                <article class="info-card">
+                    <h3>Education</h3>
+                    <ul>
+                        <li><strong>B.A. in English</strong> — University of Oregon, GPA 4.06</li>
+                        <li><strong>Certificate in Technical &amp; Professional Writing</strong> — Oregon State University, expected July 2026</li>
+                        <li><strong>Awards</strong> — Stephen Swig Essay Award</li>
+                    </ul>
+                </article>
+
+                <article class="info-card">
+                    <h3>Selected strengths</h3>
+                    <ul>
+                        <li>Technical editing and proofreading</li>
+                        <li>Human-centered design and accessibility</li>
+                        <li>Audience analysis for professional and academic documents</li>
+                        <li>Instructional writing, revision, and information organization</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="writing" class="tab-panel" role="tabpanel" aria-labelledby="writing-tab" hidden>
+            <div class="panel-intro">
+                <!-- Uses a responsive grid to lay out the writing sample cards and their action buttons. -->
+                <h2>Writing &amp; documents</h2>
+                <p>Selected samples of instructional writing, policy documents, and research-based communication.</p>
+            </div>
+
+            <div class="sample-grid">
+                <!-- Each sample card stores the document title, summary, and button attributes used by the preview script. -->
+                <article class="sample-card">
+                    <div class="sample-card-top">
+                        <div class="sample-icon">PDF</div>
+                        <div>
+                            <h3>Board Chair Description</h3>
+                            <p>A position description I volunteered to make for the Woodlawn Neighborhood Association detailing the role and responsibilities of the board chair.</p>
+                        </div>
+                    </div>
+                    <div class="sample-links">
+                        <button type="button" class="sample-btn preview-btn" data-pdf="%20Board%20Chair%20Description.pdf">Preview</button>
+                        <a href="%20Board%20Chair%20Description.pdf" target="_blank" rel="noopener">Open PDF</a>
+                        <a href="%20Board%20Chair%20Description.pdf" download>Download</a>
+                    </div>
+                </article>
+
+                <article class="sample-card">
+                    <div class="sample-card-top">
+                        <div class="sample-icon">PDF</div>
+                        <div>
+                            <h3>Cat Manual</h3>
+                            <p>An instructional manual about cat care and behavior that I made as a resource for our cat sitters.</p>
+                        </div>
+                    </div>
+                    <div class="sample-links">
+                        <button type="button" class="sample-btn preview-btn" data-pdf="Cat%20Manual.pdf">Preview</button>
+                        <a href="Cat%20Manual.pdf" target="_blank" rel="noopener">Open PDF</a>
+                        <a href="Cat%20Manual.pdf" download>Download</a>
+                    </div>
+                </article>
+
+                <article class="sample-card">
+                    <div class="sample-card-top">
+                        <div class="sample-icon">PDF</div>
+                        <div>
+                            <h3>AI Report</h3>
+                            <p>A report on the University of Oregon’s artificial intelligence initiatives I created as coursework for a technical writing class.</p>
+                        </div>
+                    </div>
+                    <div class="sample-links">
+                        <button type="button" class="sample-btn preview-btn" data-pdf="AI%20Report.pdf">Preview</button>
+                        <a href="AI%20Report.pdf" target="_blank" rel="noopener">Open PDF</a>
+                        <a href="AI%20Report.pdf" download>Download</a>
+                    </div>
+                </article>
+
+                <article class="sample-card">
+                    <div class="sample-card-top">
+                        <div class="sample-icon">PDF</div>
+                        <div>
+                            <h3>PowerPanel Manual</h3>
+                            <p>An installation and operations manual for a fuel dispensing system, created for a technical writing course.</p>
+                        </div>
+                    </div>
+                    <div class="sample-links">
+                        <button type="button" class="sample-btn preview-btn" data-pdf="PowerPanel%20Manual.pdf">Preview</button>
+                        <a href="PowerPanel%20Manual.pdf" target="_blank" rel="noopener">Open PDF</a>
+                        <a href="PowerPanel%20Manual.pdf" download>Download</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="cv" class="tab-panel" role="tabpanel" aria-labelledby="cv-tab" hidden>
+            <div class="panel-intro">
+                <!-- Renders the CV in a document-like panel with grouped sections for experience, education, and skills. -->
+                <h2>Curriculum Vitae</h2>
+                <p>My background in editing, documentation, and audience-centered writing.</p>
+            </div>
+
+            <article class="cv-sheet">
+                <header class="cv-header">
+                    <div>
+                        <h3>Guthrie Hausken</h3>
+                        <p>Portland, Oregon | 541-224-2037 | guthriehausken@gmail.com</p>
+                    </div>
+                    <p class="cv-role">Emerging technical writer focused on human-centered design and documentation.</p>
+                </header>
+
+                <section class="cv-section">
+                    <h4>Professional Profile</h4>
+                    <p>Emerging technical writer with a B.A. in English from the University of Oregon and ongoing coursework toward a technical writing certificate from Oregon State University. Experienced in translating research-heavy material into clear, structured, audience-oriented content. Skilled in documentation development, editing, formatting, and collaborative revision.</p>
+                </section>
+
+                <section class="cv-section">
+                    <h4>Education</h4>
+                    <div class="cv-entry">
+                        <div class="cv-entry-head">
+                            <strong>Bachelor of Arts in English</strong>
+                            <span>University of Oregon</span>
+                        </div>
+                        <p>Cumulative GPA: 4.06</p>
+                    </div>
+                    <div class="cv-entry">
+                        <div class="cv-entry-head">
+                            <strong>Technical Writing Credential</strong>
+                            <span>Oregon State University</span>
+                        </div>
+                        <p>In progress; expected completion July 2026</p>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <h4>Relevant Coursework</h4>
+                    <ul>
+                        <li>Rhetoric and Ethics</li>
+                        <li>Scientific and Technical Writing</li>
+                        <li>Manuals and Instructions</li>
+                        <li>Human-Centered Design</li>
+                        <li>Accessibility Studies</li>
+                        <li>Information Architecture</li>
+                    </ul>
+                </section>
+
+                <section class="cv-section">
+                    <h4>Awards and Honors</h4>
+                    <ul>
+                        <li>2025 Stephen Swig Essay Prize, University of Oregon — $500</li>
+                        <li>Dean’s List, University of Oregon — all semesters</li>
+                        <li>Summa Cum Laude</li>
+                    </ul>
+                </section>
+
+                <section class="cv-section">
+                    <h4>Technical Writing &amp; Academic Experience</h4>
+                    <div class="cv-entry">
+                        <div class="cv-entry-head">
+                            <strong>Writing Center Tutor</strong>
+                            <span>University Writing Centers, 2020–2023</span>
+                        </div>
+                        <ul>
+                            <li>Conducted one-on-one consultations to help students develop clear, organized, and audience-focused documents.</li>
+                            <li>Edited and proofread academic and technical documents for clarity, tone, grammar, and style.</li>
+                            <li>Helped writers restructure dense material into accessible formats and improved content accuracy through targeted questions.</li>
+                        </ul>
+                    </div>
+                    <div class="cv-entry">
+                        <div class="cv-entry-head">
+                            <strong>Volunteer Technical Writer</strong>
+                            <span>Woodlawn Neighborhood Association</span>
+                        </div>
+                        <ul>
+                            <li>Volunteered to create, refurbish and maintain a Google Workspace documentation system for my local neighborhood association.</li>
+                            <li>Documented association processes like farmer's market financials, hybrid community meetings, and internal systems architecture.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="cv-section">
+                    <h4>Technical Skills</h4>
+                    <ul>
+                        <li>Microsoft Word</li>
+                        <li>Adobe InDesign</li>
+                        <li>Adobe FrameMaker</li>
+                        <li>Markdown</li>
+                        <li>HTML and CSS</li>
+                        <li>GitHub</li>
+                        <li>Google Workspace</li>
+                    </ul>
+                </section>
+
+                <section class="cv-section">
+                    <h4>Professional Strengths</h4>
+                    <ul>
+                        <li>Strong analytical and rhetorical foundation</li>
+                        <li>Ability to translate complex concepts into accessible language</li>
+                        <li>Detail-oriented editing and revision skills</li>
+                        <li>Comfortable collaborating with subject matter experts and stakeholders</li>
+                        <li>Adaptable and eager to grow in technical and community-facing environments</li>
+                    </ul>
+                </section>
+            </article>
+        </section>
+
+        <section id="contact" class="tab-panel" role="tabpanel" aria-labelledby="contact-tab" hidden>
+            <div class="panel-intro">
+                <!-- Renders the contact links in a simple card so visitors can reach the main contact points quickly. -->
+                <h2>Contact</h2>
+                <p>I’m open to editorial, documentation, and writing opportunities that aren't secretly training AI models.</p>
+            </div>
+
+            <div class="contact-layout">
+                <article class="info-card">
+                    <h3>Reach out</h3>
+                    <ul class="contact-list">
+                        <li><a href="mailto:guthriehausken@gmail.com">✉ guthriehausken@gmail.com</a></li>
+                        <li><a href="tel:+15412242037">☎ (541) 224-2037</a></li>
+                        <li><a href="https://www.linkedin.com/in/guthrie-hausken-1b0534365/" target="_blank" rel="noopener noreferrer">⟶ LinkedIn</a></li>
+                        <li><a href="https://github.com/GuthrieHausken" target="_blank" rel="noopener noreferrer">⌥ GitHub</a></li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="other-works" class="tab-panel" role="tabpanel" aria-labelledby="other-works-tab" hidden>
+            <div class="panel-intro">
+                <h2>Other works</h2>
+                <p>Additional projects, posters, and visual work that complement the main portfolio samples.</p>
+            </div>
+
+            <div class="work-grid">
+                <article class="info-card">
+                    <h3>Featured pieces</h3>
+                    <div class="work-actions">
+                        <div class="work-item">
+                            <button type="button" class="sample-btn preview-btn" data-pdf="Rhetoric%20and%20Ethics%20Portfolio.pdf">Preview Rhetoric &amp; Ethics Portfolio</button>
+                            <p class="work-caption">My Rhetoric and Ethics coursework portfolio.</p>
+                        </div>
+                        <div class="work-item">
+                            <button type="button" class="sample-btn preview-btn" data-pdf="uoclothingexchangeposter.jpg">Preview UO Clothing Exchange Poster</button>
+                            <p class="work-caption">A poster I designed for a clothing drive for the University of Oregon.</p>
+                        </div>
+                        <div class="work-item">
+                            <button type="button" class="sample-btn preview-btn" data-pdf="HauskenGameEditorCV.pdf">Preview Failed D&amp;D CV</button>
+                            <p class="work-caption">My custom-tailored CV for a Dungeons and Dragons game editor position.</p>
+                        </div>
+                        <div class="work-item">
+                            <button type="button" class="sample-btn preview-btn" data-pdf="Sourdough%20Guide.pdf">Preview Sourdough Guide</button>
+                            <p class="work-caption">A guide to making sourdough I made for a local artisan breadmaker.</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+   
+        <div id="pdf-modal" class="pdf-modal" hidden aria-hidden="true">
+            <div class="pdf-modal-backdrop" data-close-modal></div>
+            <div class="pdf-modal-dialog" role="dialog" aria-modal="true" aria-label="Preview">
+                <button type="button" class="pdf-modal-close" aria-label="Close preview" data-close-modal>&times;</button>
+                <iframe id="pdf-frame" title="PDF preview" src="" hidden></iframe>
+                <img id="image-preview" class="image-preview" alt="Preview" hidden>
             </div>
         </div>
-    </header>
- 
-    <!-- ========== ABOUT ME ========== -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hi! I'm a recent graduate from the English department at the University of Oregon! I'm currently studying technical writing through Oregon State University,
-            and I'm applying to MFA programs across the country! 
-        </p>
-        <p>
-            I'm currently living in Portland with my partner and our three cats. I'm also attempting to resist the neoliberal AI surveillance state!
-        </p>
-    </section>
- 
-    <!-- ========== WRITING SAMPLES ========== -->
-    <section id="writing-samples">
-        <h2>Writing Samples</h2>
-        <p>
-            Here are some of my writing samples, varying in style and subject. Click Preview to open each PDF in a full-screen viewer.
-        </p>
 
-        <div class="sample-grid">
-            <article class="sample-card">
-                <div class="sample-card-top">
-                    <div class="sample-icon">PDF</div>
-                    <div>
-                        <h3>Board Chair Description</h3>
-                        <p>
-                            The Woodlawn Neighborhood Association document detailing the role and responsibilities of the board chair.
-                        </p>
-                    </div>
-                </div>
-                <div class="sample-links">
-                    <button type="button" class="sample-btn preview-btn" data-pdf="%20Board%20Chair%20Description%20copy.pdf">Preview</button>
-                    <a href="%20Board%20Chair%20Description%20copy.pdf" target="_blank" rel="noopener">Open PDF</a>
-                    <a href="%20Board%20Chair%20Description%20copy.pdf" download>Download</a>
-                </div>
-            </article>
-
-            <article class="sample-card">
-                <div class="sample-card-top">
-                    <div class="sample-icon">PDF</div>
-                    <div>
-                        <h3>Cat Manual</h3>
-                        <p>
-                            A detailed instructional document about cat care and behavior.
-                        </p>
-                    </div>
-                </div>
-                <div class="sample-links">
-                    <button type="button" class="sample-btn preview-btn" data-pdf="Cat%20Manual%20copy.pdf">Preview</button>
-                    <a href="Cat%20Manual%20copy.pdf" target="_blank" rel="noopener">Open PDF</a>
-                    <a href="Cat%20Manual%20copy.pdf" download>Download</a>
-                </div>
-            </article>
-
-            <article class="sample-card">
-                <div class="sample-card-top">
-                    <div class="sample-icon">PDF</div>
-                    <div>
-                        <h3>UO AI Report</h3>
-                        <p>
-                            A report on the University of Oregon's artificial intelligence initiatives.
-                        </p>
-                    </div>
-                </div>
-                <div class="sample-links">
-                    <button type="button" class="sample-btn preview-btn" data-pdf="UO%20AI%20Report.pdf">Preview</button>
-                    <a href="UO%20AI%20Report.pdf" target="_blank" rel="noopener">Open PDF</a>
-                    <a href="UO%20AI%20Report.pdf" download>Download</a>
-                </div>
-            </article>
-
-            <article class="sample-card">
-                <div class="sample-card-top">
-                    <div class="sample-icon">PDF</div>
-                    <div>
-                        <h3>Sourdough Guide</h3>
-                        <p>
-                            A new method for making sourdough bread.
-                        </p>
-                    </div>
-                </div>
-                <div class="sample-links">
-                    <button type="button" class="sample-btn preview-btn" data-pdf="Sourdough%20Guide.pdf">Preview</button>
-                    <a href="Sourdough%20Guide.pdf" target="_blank" rel="noopener">Open PDF</a>
-                    <a href="Sourdough%20Guide.pdf" download>Download</a>
-                </div>
-            </article>
-        </div>
-    </section>
- 
-    <!-- ========== EDUCATION ========== -->
-    <section id="education">
-        <h2>Education</h2>
-        <p>
-            <strong>Bachelor of Arts in English</strong><br>
-            Oregon State University -> University of Oregon<br>
-            Graduated Summa Cum Laude (2026)<br>
-            GPA: 4.06 
-        </p>
-
-        <p>
-            <strong>Certificate in Technical and Professional Writing</strong><br>
-            Oregon State University<br>
-            Expected Completion: July 2026
-        </p>
-
-        <h3>Relevant Coursework</h3>
-        <ul>
-            <li>Scientific & Technical Writing</li>
-            <li>Rhetoric and Ethics</li>
-            <li>Fluency with Information Technology</li>
-            <li>Manuals: Instructions and Overviews</li>
-            <li>Usability and User-Centered Design</li>
-            <li>Single-Sourcing and Methodology</li>
-            <li>Technical Editing</li>
-        </ul>
-    </section>
- 
-    <!-- ========== SKILLS ========== -->
-    <section id="skills">
-        <h2>Skills</h2>
- 
-        <h3>Technical Skills</h3>
-        <ul>
-            <li>HTML5 </li>
-            <li>Python</li>
-            <li>UX Design</li>
-            <li>Git &amp; GitHub</li>
-        </ul>
- 
-        <h3>Soft Skills</h3>
-        <ul>
-            <li>Written and verbal communication</li>
-            <li>Information Architecture</li>
-            <li>Detail-oriented</li>
-            <li>Documentation enjoyer</li>
-        </ul>
-    </section>
- 
-    <!-- ========== PROJECTS (optional ordered list section) ========== -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <ol>
-            <li>
-                <strong>Does This Website Count?</strong> — I built this resume
-                page using semantic HTML5 and custom CSS, including a background overlay, accessible
-                links, and a cohesive design system (if you will).
-            </li>
-            <li>
-                <strong>A Sourdough Recipe!</strong> — Used InDesign to write, design, and layout a manual for making regular loaves of sourdough from a starter.
-            </li>
-            <li>
-                <strong>Woodlawn Neighborhood Association Documentation Set</strong> — Designed and implemented a documentation set for the Woodlawn Neighborhood Association, including a style guide, templates, and sample documentation pages.
-            </li>
-        </ol>
-    </section>
-
-    <div id="pdf-modal" class="pdf-modal" hidden aria-hidden="true">
-        <div class="pdf-modal-backdrop" data-close-modal></div>
-        <div class="pdf-modal-dialog" role="dialog" aria-modal="true" aria-label="PDF preview">
-            <button type="button" class="pdf-modal-close" aria-label="Close preview" data-close-modal>&times;</button>
-            <iframe id="pdf-frame" title="PDF preview" src=""></iframe>
-        </div>
-    </div>
-
-    <!-- ========== FOOTER ========== -->
-    <footer>
-        <p>&copy; 2025 Guthrie Hausken. All rights reserved.</p>
-        <p>Built with HTML, CSS</p>
-    </footer>
+        <footer>
+            <!-- Closes the main content structure with copyright text and site-build details. -->
+            <p>&copy; 2026 Guthrie Hausken. All rights reserved.</p>
+            <p>Built with semantic HTML, CSS, and JavaScript.</p>
+        </footer>
+    </main>
 
     <script>
+        // Selects the tab buttons and tab panels so the page can switch between sections dynamically.
+        const tabButtons = document.querySelectorAll('.tab-btn');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        function setActiveTab(targetId) {
+            tabButtons.forEach((button) => {
+                const isActive = button.getAttribute('data-tab') === targetId;
+                button.classList.toggle('active', isActive);
+                button.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            });
+
+            tabPanels.forEach((panel) => {
+                const isActive = panel.id === targetId;
+                panel.hidden = !isActive;
+                panel.classList.toggle('active', isActive);
+            });
+        }
+
+        tabButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-tab');
+                setActiveTab(targetId);
+            });
+        });
+
+        // Connects the modal overlay to the iframe so PDFs can open inside the page without leaving the site.
         const modal = document.getElementById('pdf-modal');
         const frame = document.getElementById('pdf-frame');
+        const imagePreview = document.getElementById('image-preview');
         const previewButtons = document.querySelectorAll('.preview-btn');
 
         function closeModal() {
+            // Hides the modal, clears the preview source, and restores normal page scrolling.
             modal.hidden = true;
             modal.setAttribute('aria-hidden', 'true');
             frame.src = '';
+            frame.hidden = true;
+            imagePreview.src = '';
+            imagePreview.hidden = true;
             document.body.style.overflow = '';
         }
 
-        function openModal(pdfPath) {
-            frame.src = pdfPath;
+        function openModal(filePath) {
+            const isImage = /\.(png|jpe?g|gif|webp|svg)$/i.test(filePath);
+
+            if (isImage) {
+                frame.hidden = true;
+                imagePreview.hidden = false;
+                imagePreview.src = filePath;
+            } else {
+                imagePreview.hidden = true;
+                frame.hidden = false;
+                frame.src = filePath;
+            }
+
             modal.hidden = false;
             modal.setAttribute('aria-hidden', 'false');
             document.body.style.overflow = 'hidden';
         }
 
+        // Lets each preview button pass its document path into the modal-opening function.
         previewButtons.forEach((button) => {
             button.addEventListener('click', () => {
                 const pdfPath = button.getAttribute('data-pdf');
@@ -242,6 +387,7 @@
             });
         });
 
+        // Allows the close button, backdrop, and Escape key to dismiss the modal and restore the page.
         document.querySelectorAll('[data-close-modal]').forEach((element) => {
             element.addEventListener('click', (event) => {
                 event.preventDefault();
@@ -262,7 +408,6 @@
             }
         });
     </script>
- 
 </body>
- 
+
 </html>
