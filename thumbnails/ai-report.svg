@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="AI report thumbnail">
+  <rect width="640" height="400" rx="28" fill="#f0f7ff"/>
+  <rect x="80" y="80" width="480" height="240" rx="24" fill="#ffffff" stroke="#c7d5e6" stroke-width="3"/>
+  <rect x="120" y="130" width="120" height="126" rx="12" fill="#123a64"/>
+  <rect x="260" y="160" width="120" height="96" rx="12" fill="#215290"/>
+  <rect x="400" y="110" width="120" height="146" rx="12" fill="#4f83bf"/>
+  <path d="M145 250h70" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+  <path d="M285 250h70" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+  <path d="M425 250h70" stroke="#ffffff" stroke-width="10" stroke-linecap="round"/>
+  <path d="M138 252l58-72 40 44 62-90 52 54" stroke="#f4c576" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+</svg>

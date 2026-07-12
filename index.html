@@ -32,6 +32,15 @@
             </div>
         </header>
 
+        <!-- Simplified floating nav mirrored on the left margin for wide-screen navigation -->
+        <nav class="side-nav" aria-label="Jump to section">
+            <button class="side-nav-btn active" type="button" data-sidenav-tab="overview">Overview</button>
+            <button class="side-nav-btn" type="button" data-sidenav-tab="writing">Portfolio</button>
+            <button class="side-nav-btn" type="button" data-sidenav-tab="contact">Contact</button>
+            <button class="side-nav-btn" type="button" data-sidenav-tab="cv">CV</button>
+            <button class="side-nav-btn" type="button" data-sidenav-tab="other-works">Other works</button>
+        </nav>
+
         <section id="overview" class="tab-panel active" role="tabpanel" aria-labelledby="overview-tab" tabindex="0">
             <div class="panel-intro">
                 <!-- Defines the initial tab panel and gives it the active state so it appears on first load. -->
@@ -41,12 +50,19 @@
 
             <div class="card-grid overview-grid">
                 <!-- Creates a card grid that presents background, education, and strengths as separate content blocks. -->
-                <article class="info-card">
+                <article class="info-card about-card">
                     <h3>About</h3>
-                    <p>I’m an emerging technical writer living in the Portland, Oregon area. I pursued technical writing because I can simplify complex concepts. I moved to Portland with my partner and our three cats in 2025. While living in Portland, I’ve been volunteering with the Woodlawn Neighborhood Association (WNA) as a technical writer. I helped the WNA modernize their documentation infrastructure. I collaborated with the WNA board to design an accessible documentation system using universal design principles.</p> 
-                    <p>Through my education and volunteer work, I gained experience with documentation practices like single-sourcing methodology and docs-as-code systems. I hold a bachelor’s degree in English as well as a certificate of Technical Writing. I enjoy writing about a variety of topics, be it prose, policy, or products. I’m interested in opportunities to create accurate, consistent, and accessible user-facing content.</p>
-                    <h3>Mission statement</h3>
-                    <p>Technical writing is the practice of making complex information clear and understanding human needs. A technical writer must combine an understanding of language, editing, accessibility, design, and orchestration to anticipate user’s needs. My goal is to create accessible and user-centered documentation that helps organizations communicate effectively. </p>
+                    <div class="about-columns">
+                        <section class="about-column" aria-label="Bio">
+                            <h4>Bio</h4>
+                            <p>I’m an emerging technical writer living in the Portland, Oregon area. I pursued technical writing because I can simplify complex concepts. I moved to Portland with my partner and our three cats in 2025. While volunteering with the Woodlawn Neighborhood Association as a technical writer, I helped them modernize their documentation infrastructure. I collaborated with the WNA board to design an accessible documentation system using universal design principles. </p>
+                            <p>Through my education and volunteer work, I gained experience with documentation practices like single-sourcing methodology and docs-as-code systems. I hold a bachelor’s degree in English as well as a certificate of Technical Writing. I enjoy writing about a variety of topics, be it prose, policy, or products. I’m interested in opportunities to create accurate, consistent, and accessible user-facing content.</p>
+                        </section>
+                        <section class="about-column" aria-label="Mission statement">
+                            <h4>Mission statement</h4>
+                            <p>Technical writing is the process of creating documentation that anticipates human needs. A technical writer must combine an understanding of language, editing, accessibility, design, and orchestration to anticipate user’s needs. My goal is to create accessible and user-centered documentation that helps organizations communicate effectively. I hope that my work will help people find the information they need from your organization.</p>
+                        </section>
+                    </div>
                 </article>
 
                 <article class="info-card">
@@ -55,6 +71,7 @@
                         <li><strong>B.A. in English</strong> — University of Oregon, GPA 4.06</li>
                         <li><strong>Certificate in Technical &amp; Professional Writing</strong> — Oregon State University, expected July 2026</li>
                         <li><strong>Awards</strong> — Stephen Swig Essay Award</li>
+                        <li><strong>Honors</strong> — Summa Cum Laude</li>
                     </ul>
                 </article>
 
@@ -81,61 +98,69 @@
                 <!-- Each sample card stores the document title, summary, and button attributes used by the preview script. -->
                 <article class="sample-card">
                     <div class="sample-card-top">
-                        <div class="sample-icon">PDF</div>
-                        <div>
-                            <h3>Board Chair Description</h3>
-                            <p>A position description I volunteered to make for the Woodlawn Neighborhood Association detailing the role and responsibilities of the board chair.</p>
-                        </div>
-                    </div>
-                    <div class="sample-links">
+                        <img class="sample-thumbnail" src="thumbnails/board-chair.png" alt="Thumbnail preview for the Board Chair Description document">
+                        <div class="sample-card-content">
+                            <div>
+                                <h3>Board Chair Description</h3>
+                                <p>A position description I volunteered to make for the Woodlawn Neighborhood Association detailing the role and responsibilities of the board chair.</p>
+                            </div>
+                            <div class="sample-links">
                         <button type="button" class="sample-btn preview-btn" data-pdf="%20Board%20Chair%20Description.pdf">Preview</button>
                         <a href="%20Board%20Chair%20Description.pdf" target="_blank" rel="noopener">Open PDF</a>
                         <a href="%20Board%20Chair%20Description.pdf" download>Download</a>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
                 <article class="sample-card">
                     <div class="sample-card-top">
-                        <div class="sample-icon">PDF</div>
-                        <div>
-                            <h3>Cat Manual</h3>
-                            <p>An instructional manual about cat care and behavior that I made as a resource for our cat sitters.</p>
-                        </div>
-                    </div>
-                    <div class="sample-links">
+                        <img class="sample-thumbnail" src="thumbnails/cat-manual.png" alt="Thumbnail preview for the Cat Manual document">
+                        <div class="sample-card-content">
+                            <div>
+                                <h3>Cat Manual</h3>
+                                <p>An instructional manual about cat care and behavior that I made as a resource for our cat sitters.</p>
+                            </div>
+                            <div class="sample-links">
                         <button type="button" class="sample-btn preview-btn" data-pdf="Cat%20Manual.pdf">Preview</button>
                         <a href="Cat%20Manual.pdf" target="_blank" rel="noopener">Open PDF</a>
                         <a href="Cat%20Manual.pdf" download>Download</a>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
                 <article class="sample-card">
                     <div class="sample-card-top">
-                        <div class="sample-icon">PDF</div>
-                        <div>
-                            <h3>AI Report</h3>
-                            <p>A report on the University of Oregon’s artificial intelligence initiatives I created as coursework for a technical writing class.</p>
-                        </div>
-                    </div>
-                    <div class="sample-links">
+                        <img class="sample-thumbnail" src="thumbnails/ai-report.png" alt="Thumbnail preview for the AI Report document">
+                        <div class="sample-card-content">
+                            <div>
+                                <h3>AI Report</h3>
+                                <p>A report on the University of Oregon’s artificial intelligence initiatives I created as coursework for a technical writing class.</p>
+                            </div>
+                            <div class="sample-links">
                         <button type="button" class="sample-btn preview-btn" data-pdf="AI%20Report.pdf">Preview</button>
                         <a href="AI%20Report.pdf" target="_blank" rel="noopener">Open PDF</a>
                         <a href="AI%20Report.pdf" download>Download</a>
+                            </div>
+                        </div>
                     </div>
                 </article>
 
                 <article class="sample-card">
                     <div class="sample-card-top">
-                        <div class="sample-icon">PDF</div>
-                        <div>
-                            <h3>PowerPanel Manual</h3>
-                            <p>An installation and operations manual for a fuel dispensing system, created for a technical writing course.</p>
+                        <img class="sample-thumbnail" src="thumbnails/powerpanel.png" alt="Thumbnail preview for the PowerPanel Manual document">
+                        <div class="sample-card-content">
+                            <div>
+                                <h3>PowerPanel Manual</h3>
+                                <p>An installation and operations manual for a fuel dispensing system, created for a technical writing course.</p>
+                            </div>
+                            <div class="sample-links">
+                                <button type="button" class="sample-btn preview-btn" data-pdf="PowerPanel%20Manual.pdf">Preview</button>
+                                <a href="PowerPanel%20Manual.pdf" target="_blank" rel="noopener">Open PDF</a>
+                                <a href="PowerPanel%20Manual.pdf" download>Download</a>
+                            </div>
                         </div>
-                    </div>
-                    <div class="sample-links">
-                        <button type="button" class="sample-btn preview-btn" data-pdf="PowerPanel%20Manual.pdf">Preview</button>
-                        <a href="PowerPanel%20Manual.pdf" target="_blank" rel="noopener">Open PDF</a>
-                        <a href="PowerPanel%20Manual.pdf" download>Download</a>
                     </div>
                 </article>
             </div>
@@ -327,6 +352,24 @@
         // Selects the tab buttons and tab panels so the page can switch between sections dynamically.
         const tabButtons = document.querySelectorAll('.tab-btn');
         const tabPanels = document.querySelectorAll('.tab-panel');
+        const sideNavBtns = document.querySelectorAll('.side-nav-btn');
+        const revealSelector = '.info-card, .sample-card, .cv-section, .work-item, .gallery-item';
+
+        function animatePanelContent(panel) {
+            // Staggers card reveals for the active panel so each tab swap feels smooth and intentional.
+            const revealItems = panel.querySelectorAll(revealSelector);
+
+            revealItems.forEach((item, index) => {
+                item.classList.remove('is-visible');
+                item.style.transitionDelay = `${Math.min(index * 55, 330)}ms`;
+            });
+
+            requestAnimationFrame(() => {
+                revealItems.forEach((item) => {
+                    item.classList.add('is-visible');
+                });
+            });
+        }
 
         function setActiveTab(targetId) {
             tabButtons.forEach((button) => {
@@ -340,6 +383,15 @@
                 const isActive = panel.id === targetId;
                 panel.hidden = !isActive;
                 panel.classList.toggle('active', isActive);
+
+                if (isActive) {
+                    animatePanelContent(panel);
+                }
+            });
+
+            // Keep the left side-nav in sync with the active tab.
+            sideNavBtns.forEach((btn) => {
+                btn.classList.toggle('active', btn.getAttribute('data-sidenav-tab') === targetId);
             });
         }
 
@@ -442,6 +494,18 @@
                 closeModal();
             }
         });
+
+        // Wire the side-nav buttons to the same tab-switching logic.
+        sideNavBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                setActiveTab(btn.getAttribute('data-sidenav-tab'));
+            });
+        });
+
+        const initiallyActivePanel = document.querySelector('.tab-panel.active');
+        if (initiallyActivePanel) {
+            animatePanelContent(initiallyActivePanel);
+        }
     </script>
 </body>
 

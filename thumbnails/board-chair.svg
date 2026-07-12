@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Board chair description thumbnail">
+  <rect width="640" height="400" rx="28" fill="#eaf3ff"/>
+  <rect x="70" y="70" width="500" height="260" rx="24" fill="#ffffff" stroke="#c7d5e6" stroke-width="3"/>
+  <rect x="110" y="110" width="170" height="24" rx="8" fill="#123a64"/>
+  <rect x="110" y="152" width="250" height="16" rx="8" fill="#4d5f74" opacity="0.85"/>
+  <rect x="110" y="182" width="220" height="16" rx="8" fill="#4d5f74" opacity="0.6"/>
+  <rect x="110" y="232" width="160" height="18" rx="8" fill="#215290"/>
+  <rect x="110" y="264" width="240" height="18" rx="8" fill="#215290" opacity="0.75"/>
+  <circle cx="450" cy="215" r="72" fill="#f4c576"/>
+  <path d="M410 200c10-32 52-44 78-22 12 10 20 28 18 48-3 25-24 46-54 46-25 0-36-17-42-36-4-13-3-26 0-36z" fill="#123a64"/>
+</svg>

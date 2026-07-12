@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Cat manual thumbnail">
+  <rect width="640" height="400" rx="28" fill="#fff7ea"/>
+  <rect x="76" y="76" width="488" height="248" rx="24" fill="#ffffff" stroke="#e4cfa0" stroke-width="3"/>
+  <path d="M220 250c-24-44-8-92 30-120 26-19 60-24 90-12 41 17 60 59 52 104-8 45-45 78-87 78-30 0-59-14-85-50z" fill="#2f3640"/>
+  <circle cx="245" cy="180" r="12" fill="#ffefcf"/>
+  <circle cx="310" cy="180" r="12" fill="#ffefcf"/>
+  <path d="M260 224c12 10 43 10 56 0" stroke="#ffefcf" stroke-width="8" stroke-linecap="round"/>
+  <path d="M332 126c36-28 106-24 138 22" stroke="#123a64" stroke-width="16" stroke-linecap="round"/>
+  <rect x="150" y="292" width="260" height="18" rx="8" fill="#123a64" opacity="0.8"/>
+  <rect x="150" y="318" width="180" height="12" rx="6" fill="#4d5f74" opacity="0.75"/>
+</svg>
