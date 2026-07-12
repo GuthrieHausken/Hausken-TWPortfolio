@@ -15,7 +15,9 @@
         <header class="hero">
             <div class="header-inner">
                 <!-- Uses CSS grid to place the circular profile image beside the hero text. -->
-                <img src="Guthrie Hausken_02.jpg" class="profile-img" alt="Portrait of Guthrie Hausken">
+                <div class="profile-wrap">
+                    <img src="Guthrie Hausken_02.jpg" class="profile-img" alt="Portrait of Guthrie Hausken">
+                </div>
                 <div class="header-text">
                     <!-- Contains the heading, tagline, and button controls that introduce the portfolio sections. -->
                     <p class="eyebrow">Technical writing • editing • documentation</p>
@@ -294,9 +296,6 @@
                         <li><a href="https://github.com/GuthrieHausken" target="_blank" rel="noopener noreferrer">⌥ GitHub</a></li>
                     </ul>
                 </article>
-                <aside class="contact-cat" aria-hidden="true">
-                    <img src="contact%20cat.jpeg" alt="photgraph of a goboer" title="photgraph of a goboer" class="contact-cat-image" loading="lazy">
-                </aside>
             </div>
         </section>
 
@@ -383,6 +382,8 @@
         }
 
         function setActiveTab(targetId) {
+            document.body.classList.toggle('contact-active', targetId === 'contact');
+
             tabButtons.forEach((button) => {
                 const isActive = button.getAttribute('data-tab') === targetId;
                 button.classList.toggle('active', isActive);
@@ -515,6 +516,7 @@
 
         const initiallyActivePanel = document.querySelector('.tab-panel.active');
         if (initiallyActivePanel) {
+            document.body.classList.toggle('contact-active', initiallyActivePanel.id === 'contact');
             animatePanelContent(initiallyActivePanel);
         }
     </script>
