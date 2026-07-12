@@ -569,18 +569,20 @@ section ul li::marker {
 
 .sample-links {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 8px;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
     width: 100%;
     margin-top: 0;
 }
 
 .sample-links > * {
-    flex: 0 1 auto;
+    flex: 0 0 auto;
+    width: 110px;
     min-width: 0;
     white-space: nowrap;
+    text-align: center;
 }
 
 .contact-list {
@@ -824,14 +826,10 @@ button:focus-visible {
         grid-column: auto;
     }
 
-    .sample-links {
-        flex-wrap: wrap;
-    }
-
     .sample-links > * {
-        flex: 1 1 140px;
+        flex: 0 0 auto;
+        width: 110px;
         max-width: none;
-        width: auto;
     }
 }
 

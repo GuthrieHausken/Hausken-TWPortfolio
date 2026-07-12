@@ -1,0 +1,46 @@
+Site: Guthrie Hausken Portfolio Site V3
+Type: Static single-page portfolio
+Primary language: English
+
+Purpose:
+This file provides a plain-text, machine-readable summary for LLM crawlers and retrieval systems.
+It is intentionally not linked in the visible UI.
+
+Core Files:
+- /index.html : Main page content and JavaScript interactions
+- /styles.css : Visual styles and responsive layout
+- /README.md : Project overview and setup notes
+- /HTML_DOCUMENTATION.md : HTML structure documentation
+- /CSS_DOCUMENTATION.md : CSS architecture documentation
+- /JAVASCRIPT_DOCUMENTATION.md : JavaScript behavior documentation
+
+Top-Level Content Areas (from index.html):
+- Overview: Bio, mission statement, education, selected strengths
+- Portfolio (Writing & documents): Writing samples with preview/open/download actions
+- Contact: Contact links and communication information
+- CV: Curriculum vitae with profile, education, honors, and experience
+- Other works: Additional visual and writing projects
+
+Writing Sample Documents Referenced:
+- Board Chair Description
+- Cat Manual
+- AI Report
+- PowerPanel Manual
+
+Additional Works Referenced:
+- Rhetoric and Ethics Portfolio
+- UO Clothing Exchange Poster
+- WNA Party Poster 2
+- WNA Party Poster 1
+- D&D CV
+- Sourdough Guide
+- Award-Winning Essay
+
+Interaction Notes:
+- Tabs are ARIA-based and keyboard accessible.
+- Preview buttons open PDF/image content in a modal viewer.
+- Side navigation mirrors the top tab controls on wide screens.
+
+Update Guidance:
+- Keep this file concise and factual.
+- Update when section names, file names, or document inventory changes.

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# LLM-friendly plain-text index
+LLMs: /llms.txt

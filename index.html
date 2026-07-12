@@ -365,6 +365,12 @@
         const sideNavBtns = document.querySelectorAll('.side-nav-btn');
         const revealSelector = '.info-card, .sample-card, .cv-section, .work-item, .gallery-item';
 
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+
         function animatePanelContent(panel) {
             // Staggers card reveals for the active panel so each tab swap feels smooth and intentional.
             const revealItems = panel.querySelectorAll(revealSelector);
