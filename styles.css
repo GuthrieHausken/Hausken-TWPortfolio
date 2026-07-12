@@ -279,7 +279,6 @@ header h1 {
     }
 }
 
-.hero-btn,
 .sample-links a,
 .sample-btn {
     display: inline-flex;
@@ -299,32 +298,12 @@ header h1 {
     transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
 }
 
-.hero-btn:hover,
 .sample-links a:hover,
 .sample-btn:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 28px rgba(25, 59, 109, 0.2);
     background: linear-gradient(135deg, var(--clr-accent-2) 0%, var(--clr-accent) 100%);
     color: #ffffff;
-}
-
-.hero-btn.secondary {
-    background: rgba(255, 255, 255, 0.96);
-    color: var(--clr-accent);
-    border-color: var(--clr-line);
-    box-shadow: 0 6px 16px rgba(25, 59, 109, 0.08);
-}
-
-.hero-btn.secondary:hover {
-    background: rgba(234, 242, 255, 1);
-    color: var(--clr-accent);
-}
-
-.tab-nav {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 28px;
 }
 
 .tab-btn {
@@ -450,7 +429,6 @@ section ul li::marker {
 }
 
 .card-grid,
-.experience-layout,
 .contact-layout {
     display: grid;
     gap: 18px;
@@ -527,10 +505,6 @@ section ul li::marker {
     transform: translateY(0);
 }
 
-.large-card {
-    grid-column: span 2;
-}
-
 .sample-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -586,38 +560,11 @@ section ul li::marker {
     box-shadow: 0 10px 24px rgba(22, 33, 46, 0.08);
 }
 
-.sample-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 44px;
-    height: 44px;
-    border: 1px solid rgba(25, 59, 109, 0.16);
-    color: var(--clr-accent);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    background: var(--clr-accent-soft);
-    border-radius: 10px;
-}
-
 .sample-card h3 {
     margin-top: 0;
     margin-bottom: 8px;
     color: var(--clr-accent);
     font-size: 1.06rem;
-}
-
-.sample-details {
-    margin-top: 10px;
-    display: grid;
-    gap: 6px;
-}
-
-.sample-details p {
-    margin: 0;
-    font-size: 0.94rem;
-    line-height: 1.5;
 }
 
 .sample-links {
@@ -636,28 +583,17 @@ section ul li::marker {
     white-space: nowrap;
 }
 
-.cv-card {
-    margin-top: 18px;
-    padding: 18px 20px;
-    border: 1px solid var(--clr-line);
-    border-radius: 18px;
-    background: rgba(39, 75, 58, 0.05);
-}
-
-.contact-list,
-.link-list {
+.contact-list {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.contact-list li,
-.link-list li {
+.contact-list li {
     padding: 0;
 }
 
-.contact-list a,
-.link-list a {
+.contact-list a {
     color: var(--clr-accent);
     text-decoration: underline;
     text-underline-offset: 0.18em;
@@ -674,8 +610,7 @@ section ul li::marker {
     line-height: 1.45;
 }
 
-.contact-list a:hover,
-.link-list a:hover {
+.contact-list a:hover {
     color: var(--clr-accent-2);
 }
 
@@ -778,11 +713,6 @@ section ul li::marker {
     margin: 0;
 }
 
-.placeholder {
-    font-style: italic;
-    color: var(--clr-muted);
-}
-
 .pdf-modal {
     position: fixed;
     inset: 0;
@@ -852,10 +782,6 @@ footer p {
     margin: 0;
 }
 
-footer p {
-    margin: 0;
-}
-
 @keyframes fade-up {
     from {
         opacity: 0.94;
@@ -885,7 +811,6 @@ button:focus-visible {
     }
 
     .card-grid,
-    .experience-layout,
     .contact-layout,
     .sample-grid,
     .work-grid {
@@ -897,10 +822,6 @@ button:focus-visible {
     .sample-grid > :only-child,
     .work-grid > :only-child {
         grid-column: auto;
-    }
-
-    .large-card {
-        grid-column: span 1;
     }
 
     .sample-links {
@@ -925,7 +846,6 @@ button:focus-visible {
     }
 
     .card-grid,
-    .experience-layout,
     .contact-layout,
     .sample-grid,
     .work-grid {
@@ -942,17 +862,8 @@ button:focus-visible {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .large-card {
-        grid-column: span 1;
-    }
-
     .cv-header {
         flex-direction: column;
-    }
-
-    .education-grid,
-    .skills-grid {
-        grid-template-columns: 1fr;
     }
 }
 
