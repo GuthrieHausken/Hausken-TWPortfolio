@@ -374,6 +374,10 @@ main .hero-actions .tab-btn {
     background: var(--clr-surface-2);
 }
 
+#other-works.tab-panel {
+    background: var(--clr-surface-2);
+}
+
 .panel-intro {
     margin-bottom: 20px;
 }
