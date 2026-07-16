@@ -776,6 +776,45 @@ section ul li::marker {
     background: white;
 }
 
+.modal-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.72);
+    color: #ffffff;
+    font-size: 1.7rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-nav-prev {
+    left: 12px;
+}
+
+.modal-nav-next {
+    right: 12px;
+}
+
+.modal-image-status {
+    position: absolute;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    z-index: 2;
+    min-width: 64px;
+    padding: 0.28rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    font-size: 0.8rem;
+    text-align: center;
+}
+
 footer {
     padding: 26px 0 0;
     color: var(--clr-muted);

@@ -314,16 +314,8 @@
                             <p class="work-caption">My Rhetoric and Ethics coursework portfolio.</p>
                         </div>
                         <div class="work-item">
-                            <button type="button" class="sample-btn preview-btn" data-pdf="uoclothingexchangeposter.jpg">Preview UO Clothing Exchange Poster</button>
-                            <p class="work-caption">A poster I designed for a clothing drive for the University of Oregon.</p>
-                        </div>
-                        <div class="work-item">
-                            <button type="button" class="sample-btn preview-btn" data-pdf="POPOSTER%202.jpg">Preview WNA Party Poster 2</button>
-                            <p class="work-caption">WNA Party Poster 2 visual sample.</p>
-                        </div>
-                        <div class="work-item">
-                            <button type="button" class="sample-btn preview-btn" data-pdf="POPOSTER%201.jpg">Preview WNA Party Poster 1</button>
-                            <p class="work-caption">WNA Party Poster 1 visual sample.</p>
+                            <button type="button" class="sample-btn preview-btn" data-pdf="uoclothingexchangeposter.jpg" data-gallery="uoclothingexchangeposter.jpg|POPOSTER%202.jpg|POPOSTER%201.jpg">Preview Poster Collection</button>
+                            <p class="work-caption">Three event posters in one preview. Use the arrows to browse each design.</p>
                         </div>
                         <div class="work-item">
                             <button type="button" class="sample-btn preview-btn" data-pdf="HauskenGameEditorCV.pdf">Preview D&amp;D CV</button>
@@ -346,8 +338,11 @@
             <div class="pdf-modal-backdrop" data-close-modal></div>
             <div class="pdf-modal-dialog" role="dialog" aria-modal="true" aria-label="Preview">
                 <button type="button" class="pdf-modal-close" aria-label="Close preview" data-close-modal>&times;</button>
+                <button type="button" id="modal-image-prev" class="modal-nav-btn modal-nav-prev" aria-label="Previous poster" hidden>&lsaquo;</button>
+                <button type="button" id="modal-image-next" class="modal-nav-btn modal-nav-next" aria-label="Next poster" hidden>&rsaquo;</button>
                 <iframe id="pdf-frame" title="PDF preview" src="" hidden></iframe>
                 <img id="image-preview" class="image-preview" alt="Preview" hidden>
+                <div id="modal-image-status" class="modal-image-status" aria-live="polite" hidden></div>
             </div>
         </div>
 
@@ -453,7 +448,36 @@
         const modal = document.getElementById('pdf-modal');
         const frame = document.getElementById('pdf-frame');
         const imagePreview = document.getElementById('image-preview');
+        const imagePrevButton = document.getElementById('modal-image-prev');
+        const imageNextButton = document.getElementById('modal-image-next');
+        const imageStatus = document.getElementById('modal-image-status');
         const previewButtons = document.querySelectorAll('.preview-btn');
+        let activeImageGallery = [];
+        let activeImageIndex = 0;
+
+        function updateImageControls() {
+            const showControls = !imagePreview.hidden && activeImageGallery.length > 1;
+            imagePrevButton.hidden = !showControls;
+            imageNextButton.hidden = !showControls;
+            imageStatus.hidden = !showControls;
+
+            if (showControls) {
+                imageStatus.textContent = `${activeImageIndex + 1} / ${activeImageGallery.length}`;
+            } else {
+                imageStatus.textContent = '';
+            }
+        }
+
+        function showGalleryImage(index) {
+            if (!activeImageGallery.length) {
+                return;
+            }
+
+            activeImageIndex = (index + activeImageGallery.length) % activeImageGallery.length;
+            imagePreview.src = activeImageGallery[activeImageIndex];
+            imagePreview.alt = `Poster ${activeImageIndex + 1} preview`;
+            updateImageControls();
+        }
 
         function closeModal() {
             // Hides the modal, clears the preview source, and restores normal page scrolling.
@@ -463,20 +487,27 @@
             frame.hidden = true;
             imagePreview.src = '';
             imagePreview.hidden = true;
+            activeImageGallery = [];
+            activeImageIndex = 0;
+            updateImageControls();
             document.body.style.overflow = '';
         }
 
-        function openModal(filePath) {
+        function openModal(filePath, galleryFiles = []) {
             const isImage = /\.(png|jpe?g|gif|webp|svg)$/i.test(filePath);
 
             if (isImage) {
                 frame.hidden = true;
                 imagePreview.hidden = false;
-                imagePreview.src = filePath;
+                activeImageGallery = galleryFiles.length ? galleryFiles : [filePath];
+                showGalleryImage(0);
             } else {
                 imagePreview.hidden = true;
                 frame.hidden = false;
                 frame.src = filePath;
+                activeImageGallery = [];
+                activeImageIndex = 0;
+                updateImageControls();
             }
 
             modal.hidden = false;
@@ -488,8 +519,23 @@
         previewButtons.forEach((button) => {
             button.addEventListener('click', () => {
                 const pdfPath = button.getAttribute('data-pdf');
-                openModal(pdfPath);
+                const gallery = button
+                    .getAttribute('data-gallery')
+                    ?.split('|')
+                    .map((item) => item.trim())
+                    .filter(Boolean) || [];
+                openModal(pdfPath, gallery);
             });
+        });
+
+        imagePrevButton.addEventListener('click', (event) => {
+            event.stopPropagation();
+            showGalleryImage(activeImageIndex - 1);
+        });
+
+        imageNextButton.addEventListener('click', (event) => {
+            event.stopPropagation();
+            showGalleryImage(activeImageIndex + 1);
         });
 
         // Allows the close button, backdrop, and Escape key to dismiss the modal and restore the page.
@@ -510,6 +556,18 @@
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape' && !modal.hidden) {
                 closeModal();
+            }
+
+            if (!modal.hidden && !imagePreview.hidden && activeImageGallery.length > 1) {
+                if (event.key === 'ArrowLeft') {
+                    event.preventDefault();
+                    showGalleryImage(activeImageIndex - 1);
+                }
+
+                if (event.key === 'ArrowRight') {
+                    event.preventDefault();
+                    showGalleryImage(activeImageIndex + 1);
+                }
             }
         });
 
