@@ -13,11 +13,13 @@ Inline script in `index.html` controls tabs, panel animations, side-nav sync, an
 ## Core Functions
 
 ### `setActiveTab(targetId)`
+- Stores the current window scroll position for the previously active tab
 - Toggles `body.contact-active` when `targetId === 'contact'`
 - Updates active state on top tabs (`.tab-btn`)
 - Shows/hides tab panels using `hidden`
 - Calls `animatePanelContent` for the active panel
 - Syncs side-nav active state (`.side-nav-btn`)
+- Restores the saved window scroll position for the newly active tab after it is shown
 
 ### `animatePanelContent(panel)`
 - Targets revealable children via selector:

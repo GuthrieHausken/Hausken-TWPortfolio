@@ -22,7 +22,7 @@
                     <!-- Contains the heading, tagline, and button controls that introduce the portfolio sections. -->
                     <p class="eyebrow">Technical writing • editing • documentation</p>
                     <h1>Guthrie Hausken</h1>
-                    <p class="tagline">Recent English graduate and technical writing student. Documentation system gremlin.</p>
+                    <p class="tagline">Recent English graduate and technical writing student. Documentation system fanatic.</p>
                     <div class="hero-actions" role="tablist" aria-label="Portfolio sections">
                         <button class="tab-btn active" type="button" data-tab="writing" id="writing-tab" role="tab" aria-controls="writing" aria-selected="true" tabindex="0">Portfolio</button>
                         <button class="tab-btn" type="button" data-tab="overview" id="overview-tab" role="tab" aria-controls="overview" aria-selected="false" tabindex="-1">About me</button>
@@ -359,6 +359,8 @@
         const tabPanels = document.querySelectorAll('.tab-panel');
         const sideNavBtns = document.querySelectorAll('.side-nav-btn');
         const revealSelector = '.info-card, .sample-card, .cv-section, .work-item, .gallery-item';
+        const tabScrollPositions = new Map();
+        let activeTabId = document.querySelector('.tab-panel.active')?.id || null;
 
         if ('scrollRestoration' in history) {
             history.scrollRestoration = 'manual';
@@ -383,6 +385,14 @@
         }
 
         function setActiveTab(targetId) {
+            if (!targetId) {
+                return;
+            }
+
+            if (activeTabId) {
+                tabScrollPositions.set(activeTabId, window.scrollY);
+            }
+
             document.body.classList.toggle('contact-active', targetId === 'contact');
 
             tabButtons.forEach((button) => {
@@ -405,6 +415,13 @@
             // Keep the left side-nav in sync with the active tab.
             sideNavBtns.forEach((btn) => {
                 btn.classList.toggle('active', btn.getAttribute('data-sidenav-tab') === targetId);
+            });
+
+            activeTabId = targetId;
+
+            requestAnimationFrame(() => {
+                const targetScrollY = tabScrollPositions.get(targetId) || 0;
+                window.scrollTo({ top: targetScrollY, left: 0, behavior: 'auto' });
             });
         }
 
