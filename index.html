@@ -24,11 +24,11 @@
                     <h1>Guthrie Hausken</h1>
                     <p class="tagline">Recent English graduate and technical writing student. Documentation system fanatic.</p>
                     <div class="hero-actions" role="tablist" aria-label="Portfolio sections">
-                        <button class="tab-btn active" type="button" data-tab="writing" id="writing-tab" role="tab" aria-controls="writing" aria-selected="true" tabindex="0">Portfolio</button>
-                        <button class="tab-btn" type="button" data-tab="overview" id="overview-tab" role="tab" aria-controls="overview" aria-selected="false" tabindex="-1">About me</button>
-                        <button class="tab-btn" type="button" data-tab="contact" id="contact-tab" role="tab" aria-controls="contact" aria-selected="false" tabindex="-1">Contact</button>
+                        <button class="tab-btn active" type="button" data-tab="overview" id="overview-tab" role="tab" aria-controls="overview" aria-selected="true" tabindex="0">About me</button>
+                        <button class="tab-btn" type="button" data-tab="writing" id="writing-tab" role="tab" aria-controls="writing" aria-selected="false" tabindex="-1">Portfolio</button>
+                        <button class="tab-btn" type="button" data-tab="skills-expertise" id="skills-expertise-tab" role="tab" aria-controls="skills-expertise" aria-selected="false" tabindex="-1">Skills &amp; expertise</button>
                         <button class="tab-btn" type="button" data-tab="cv" id="cv-tab" role="tab" aria-controls="cv" aria-selected="false" tabindex="-1">CV</button>
-                        <button class="tab-btn" type="button" data-tab="other-works" id="other-works-tab" role="tab" aria-controls="other-works" aria-selected="false" tabindex="-1">Other works</button>
+                        <button class="tab-btn" type="button" data-tab="contact" id="contact-tab" role="tab" aria-controls="contact" aria-selected="false" tabindex="-1">Contact</button>
                     </div>
                 </div>
             </div>
@@ -36,14 +36,14 @@
 
         <!-- Simplified floating nav mirrored on the left margin for wide-screen navigation -->
         <nav class="side-nav" aria-label="Jump to section">
-            <button class="side-nav-btn active" type="button" data-sidenav-tab="writing">Portfolio</button>
-            <button class="side-nav-btn" type="button" data-sidenav-tab="overview">About me</button>
-            <button class="side-nav-btn" type="button" data-sidenav-tab="contact">Contact</button>
+            <button class="side-nav-btn active" type="button" data-sidenav-tab="overview">About me</button>
+            <button class="side-nav-btn" type="button" data-sidenav-tab="writing">Portfolio</button>
+            <button class="side-nav-btn" type="button" data-sidenav-tab="skills-expertise">Skills &amp; expertise</button>
             <button class="side-nav-btn" type="button" data-sidenav-tab="cv">CV</button>
-            <button class="side-nav-btn" type="button" data-sidenav-tab="other-works">Other works</button>
+            <button class="side-nav-btn" type="button" data-sidenav-tab="contact">Contact</button>
         </nav>
 
-        <section id="overview" class="tab-panel" role="tabpanel" aria-labelledby="overview-tab" tabindex="0" hidden>
+        <section id="overview" class="tab-panel active" role="tabpanel" aria-labelledby="overview-tab" tabindex="0">
             <div class="panel-intro">
                 <!-- Defines the initial tab panel and gives it the active state so it appears on first load. -->
                 <h2>Overview</h2>
@@ -78,6 +78,11 @@
                 </article>
 
                 <article class="info-card">
+                    <h3>Work I’m interested in</h3>
+                    <p>I’m currently seeking technical writing, editing, and UX writing positions across any field.</p>
+                </article>
+
+                <article class="info-card">
                     <h3>Selected strengths</h3>
                     <ul>
                         <li>Technical editing and proofreading</li>
@@ -89,7 +94,7 @@
             </div>
         </section>
 
-        <section id="writing" class="tab-panel active" role="tabpanel" aria-labelledby="writing-tab" tabindex="0">
+        <section id="writing" class="tab-panel" role="tabpanel" aria-labelledby="writing-tab" tabindex="0" hidden>
             <div class="panel-intro">
                 <!-- Uses a responsive grid to lay out the writing sample cards and their action buttons. -->
                 <h2>Writing &amp; documents</h2>
@@ -102,14 +107,20 @@
                     <div class="sample-card-top">
                         <img class="sample-thumbnail" src="thumbnails/board-chair.png" alt="Thumbnail preview for the Board Chair Description document">
                         <div class="sample-card-content">
-                            <div>
+                            <div class="sample-copy">
                                 <h3>Board Chair Description</h3>
-                                <p>A position description I volunteered to make for the Woodlawn Neighborhood Association detailing the role and responsibilities of the board chair.</p>
-                            </div>
-                            <div class="sample-links">
-                        <button type="button" class="sample-btn preview-btn" data-pdf="%20Board%20Chair%20Description.pdf">Preview</button>
-                        <a href="%20Board%20Chair%20Description.pdf" target="_blank" rel="noopener">Open PDF</a>
-                        <a href="%20Board%20Chair%20Description.pdf" download>Download</a>
+                                <div class="sample-links">
+                                    <button type="button" class="sample-btn preview-btn" data-pdf="%20Board%20Chair%20Description.pdf">Preview</button>
+                                    <a href="%20Board%20Chair%20Description.pdf" target="_blank" rel="noopener">Open PDF</a>
+                                    <a href="%20Board%20Chair%20Description.pdf" download>Download</a>
+                                </div>
+                                <ul class="project-details">
+                                    <li><strong>Audience:</strong> Woodlawn Neighborhood Association board members and volunteers.</li>
+                                    <li><strong>Purpose:</strong> Define the board chair role and set clear expectations for responsibilities.</li>
+                                    <li><strong>Communication challenge:</strong> Translate informal institutional knowledge into a role description that is easy to scan and apply.</li>
+                                    <li><strong>Role:</strong> Researched existing practices, drafted the position description, and revised language for clarity and consistency.</li>
+                                    <li><strong>Outcome:</strong> Produced a reusable governance document for onboarding, succession planning, and accountability.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -119,14 +130,20 @@
                     <div class="sample-card-top">
                         <img class="sample-thumbnail" src="thumbnails/cat-manual.png" alt="Thumbnail preview for the Cat Manual document">
                         <div class="sample-card-content">
-                            <div>
+                            <div class="sample-copy">
                                 <h3>Cat Manual</h3>
-                                <p>An instructional manual about cat care and behavior that I made as a resource for our cat sitters.</p>
-                            </div>
-                            <div class="sample-links">
-                        <button type="button" class="sample-btn preview-btn" data-pdf="Cat%20Manual.pdf">Preview</button>
-                        <a href="Cat%20Manual.pdf" target="_blank" rel="noopener">Open PDF</a>
-                        <a href="Cat%20Manual.pdf" download>Download</a>
+                                <div class="sample-links">
+                                    <button type="button" class="sample-btn preview-btn" data-pdf="Cat%20Manual.pdf">Preview</button>
+                                    <a href="Cat%20Manual.pdf" target="_blank" rel="noopener">Open PDF</a>
+                                    <a href="Cat%20Manual.pdf" download>Download</a>
+                                </div>
+                                <ul class="project-details">
+                                    <li><strong>Audience:</strong> Cat sitters with different levels of experience.</li>
+                                    <li><strong>Purpose:</strong> Provide practical care instructions and behavior guidance.</li>
+                                    <li><strong>Communication challenge:</strong> Combine daily task instructions with behavioral context without overwhelming readers.</li>
+                                    <li><strong>Role:</strong> Organized care content, wrote step-by-step instructions, and edited for quick reference use.</li>
+                                    <li><strong>Outcome:</strong> Created a single guide sitters can rely on for routines, expectations, and common scenarios.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -136,14 +153,20 @@
                     <div class="sample-card-top">
                         <img class="sample-thumbnail" src="thumbnails/ai-report.png" alt="Thumbnail preview for the AI Report document">
                         <div class="sample-card-content">
-                            <div>
+                            <div class="sample-copy">
                                 <h3>AI Report</h3>
-                                <p>A report on the University of Oregon’s artificial intelligence initiatives I created as coursework for a technical writing class.</p>
-                            </div>
-                            <div class="sample-links">
-                        <button type="button" class="sample-btn preview-btn" data-pdf="AI%20Report.pdf">Preview</button>
-                        <a href="AI%20Report.pdf" target="_blank" rel="noopener">Open PDF</a>
-                        <a href="AI%20Report.pdf" download>Download</a>
+                                <div class="sample-links">
+                                    <button type="button" class="sample-btn preview-btn" data-pdf="AI%20Report.pdf">Preview</button>
+                                    <a href="AI%20Report.pdf" target="_blank" rel="noopener">Open PDF</a>
+                                    <a href="AI%20Report.pdf" download>Download</a>
+                                </div>
+                                <ul class="project-details">
+                                    <li><strong>Audience:</strong> Academic readers interested in institutional technology strategy.</li>
+                                    <li><strong>Purpose:</strong> Explain the University of Oregon's AI initiatives in a structured, evidence-based format.</li>
+                                    <li><strong>Communication challenge:</strong> Synthesize complex, evolving information into a coherent and readable report.</li>
+                                    <li><strong>Role:</strong> Conducted research, built the report structure, and revised for clarity and flow.</li>
+                                    <li><strong>Outcome:</strong> Delivered a clear summary of initiatives that balances technical detail with accessibility.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -153,14 +176,20 @@
                     <div class="sample-card-top">
                         <img class="sample-thumbnail" src="thumbnails/powerpanel.png" alt="Thumbnail preview for the PowerPanel Manual document">
                         <div class="sample-card-content">
-                            <div>
+                            <div class="sample-copy">
                                 <h3>PowerPanel Manual</h3>
-                                <p>An installation and operations manual for a fuel dispensing system, created for a technical writing course.</p>
-                            </div>
-                            <div class="sample-links">
-                                <button type="button" class="sample-btn preview-btn" data-pdf="PowerPanel%20Manual.pdf">Preview</button>
-                                <a href="PowerPanel%20Manual.pdf" target="_blank" rel="noopener">Open PDF</a>
-                                <a href="PowerPanel%20Manual.pdf" download>Download</a>
+                                <div class="sample-links">
+                                    <button type="button" class="sample-btn preview-btn" data-pdf="PowerPanel%20Manual.pdf">Preview</button>
+                                    <a href="PowerPanel%20Manual.pdf" target="_blank" rel="noopener">Open PDF</a>
+                                    <a href="PowerPanel%20Manual.pdf" download>Download</a>
+                                </div>
+                                <ul class="project-details">
+                                    <li><strong>Audience:</strong> Technicians and operators responsible for installation and day-to-day system use.</li>
+                                    <li><strong>Purpose:</strong> Guide safe setup and operation of a fuel dispensing system.</li>
+                                    <li><strong>Communication challenge:</strong> Make technical procedures precise while keeping instructions usable under real working conditions.</li>
+                                    <li><strong>Role:</strong> Developed procedural content, organized steps and warnings, and edited for consistency.</li>
+                                    <li><strong>Outcome:</strong> Produced an operations manual designed to support accurate installation and safer operation.</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
@@ -299,35 +328,82 @@
             </div>
         </section>
 
-        <section id="other-works" class="tab-panel" role="tabpanel" aria-labelledby="other-works-tab" tabindex="0" hidden>
+        <section id="skills-expertise" class="tab-panel" role="tabpanel" aria-labelledby="skills-expertise-tab" tabindex="0" hidden>
             <div class="panel-intro">
-                <h2>Other works</h2>
-                <p>Additional projects, posters, and visual work that complement the main portfolio samples.</p>
+                <h2>Skills &amp; expertise</h2>
+                <p>These are the skills I rely on most often, with examples of how I have used them.</p>
             </div>
 
             <div class="work-grid">
                 <article class="info-card">
-                    <h3>Featured pieces</h3>
+                    <h3>Skills in practice</h3>
                     <div class="work-actions">
-                        <div class="work-item">
-                            <button type="button" class="sample-btn preview-btn" data-pdf="Rhetoric%20and%20Ethics%20Portfolio.pdf">Preview Rhetoric &amp; Ethics Portfolio</button>
-                            <p class="work-caption">My Rhetoric and Ethics coursework portfolio.</p>
+                        <div class="work-item skill-card">
+                            <div class="skill-header">
+                                <h4>Human-centered design and audience-centered argumentation</h4>
+                                <div class="skill-tools" aria-label="Software used">
+                                    <span>Microsoft Word</span>
+                                    <span>Google Docs</span>
+                                </div>
+                            </div>
+                            <p class="skill-summary">Human-centered design approach to clear, audience-aware argumentation.</p>
+                            <div class="skill-example">
+                                <button type="button" class="sample-btn preview-btn" data-pdf="Rhetoric%20and%20Ethics%20Portfolio.pdf">Preview Rhetoric &amp; Ethics Portfolio</button>
+                                <p class="work-caption">Example: My Rhetoric and Ethics coursework portfolio.</p>
+                            </div>
                         </div>
-                        <div class="work-item">
-                            <button type="button" class="sample-btn preview-btn" data-pdf="uoclothingexchangeposter.jpg" data-gallery="uoclothingexchangeposter.jpg|POPOSTER%202.jpg|POPOSTER%201.jpg">Preview Poster Collection</button>
-                            <p class="work-caption">Three event posters in one preview. Use the arrows to browse each design.</p>
+                        <div class="work-item skill-card">
+                            <div class="skill-header">
+                                <h4>UI and UX communication with universal design principles</h4>
+                                <div class="skill-tools" aria-label="Software used">
+                                    <span>Adobe InDesign</span>
+                                    <span>Figma</span>
+                                </div>
+                            </div>
+                            <p class="skill-summary">UI and UX-focused visual layouts guided by universal design.</p>
+                            <div class="skill-example">
+                                <button type="button" class="sample-btn preview-btn" data-pdf="uoclothingexchangeposter.jpg" data-gallery="uoclothingexchangeposter.jpg|POPOSTER%202.jpg|POPOSTER%201.jpg">Preview Poster Collection</button>
+                                <p class="work-caption">Example: A three-poster event series. Use the arrows in preview to browse each design.</p>
+                            </div>
                         </div>
-                        <div class="work-item">
-                            <button type="button" class="sample-btn preview-btn" data-pdf="HauskenGameEditorCV.pdf">Preview D&amp;D CV</button>
-                            <p class="work-caption">My custom-tailored CV for a Dungeons and Dragons game editor position.</p>
+                        <div class="work-item skill-card">
+                            <div class="skill-header">
+                                <h4>Role-specific resume tailoring and editorial positioning</h4>
+                                <div class="skill-tools" aria-label="Software used">
+                                    <span>Adobe InDesign</span>
+                                </div>
+                            </div>
+                            <p class="skill-summary">Role-specific editing and content strategy with clear positioning.</p>
+                            <div class="skill-example">
+                                <button type="button" class="sample-btn preview-btn" data-pdf="HauskenGameEditorCV.pdf">Preview D&amp;D CV</button>
+                                <p class="work-caption">Example: A custom CV I made for a Dungeons and Dragons game editor role.</p>
+                            </div>
                         </div>
-                        <div class="work-item">
-                            <button type="button" class="sample-btn preview-btn" data-pdf="sourdough%20guide.pdf">Preview Sourdough Guide</button>
-                            <p class="work-caption">A guide to making sourdough I made for a local artisan breadmaker.</p>
+                        <div class="work-item skill-card">
+                            <div class="skill-header">
+                                <h4>Instructional writing and single-sourcing documentation</h4>
+                                <div class="skill-tools" aria-label="Software used">
+                                    <span>Adobe InDesign</span>
+                                </div>
+                            </div>
+                            <p class="skill-summary">Single-sourcing mindset for reusable, step-by-step documentation.</p>
+                            <div class="skill-example">
+                                <button type="button" class="sample-btn preview-btn" data-pdf="sourdough%20guide.pdf">Preview Sourdough Guide</button>
+                                <p class="work-caption">Example: A sourdough guide I made for a local artisan breadmaker.</p>
+                            </div>
                         </div>
-                        <div class="work-item">
-                            <button type="button" class="sample-btn preview-btn" data-pdf="Award-Winning%20Essay.pdf">Preview Award-Winning Essay</button>
-                            <p class="work-caption">A literary and syntactic analysis essay that won the Stephen Swig essay prize for the best undergraduate essay of the year at the University of Oregon.</p>
+                        <div class="work-item skill-card">
+                            <div class="skill-header">
+                                <h4>Close reading, syntactic analysis, and high-precision revision</h4>
+                                <div class="skill-tools" aria-label="Software used">
+                                    <span>Microsoft Word</span>
+                                </div>
+                            </div>
+                            <p class="skill-summary">High-precision editing from sentence-level clarity to structural revision.</p>
+                            <div class="skill-example">
+                                <button type="button" class="sample-btn preview-btn" data-pdf="Award-Winning%20Essay.pdf">Preview Award-Winning Essay</button>
+                                <p class="work-caption">Example: The literary and syntactic analysis essay that won the Stephen Swig Essay Prize.</p>
+                            </div>
                         </div>
                     </div>
                 </article>
