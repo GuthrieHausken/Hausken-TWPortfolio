@@ -29,6 +29,7 @@
                         <button class="tab-btn" type="button" data-tab="skills-expertise" id="skills-expertise-tab" role="tab" aria-controls="skills-expertise" aria-selected="false" tabindex="-1">Skills &amp; expertise</button>
                         <button class="tab-btn" type="button" data-tab="cv" id="cv-tab" role="tab" aria-controls="cv" aria-selected="false" tabindex="-1">CV</button>
                         <button class="tab-btn" type="button" data-tab="contact" id="contact-tab" role="tab" aria-controls="contact" aria-selected="false" tabindex="-1">Contact</button>
+                        <button class="tab-btn" type="button" data-tab="other-works" id="other-works-tab" role="tab" aria-controls="other-works" aria-selected="false" tabindex="-1">Other works</button>
                     </div>
                 </div>
             </div>
@@ -41,6 +42,7 @@
             <button class="side-nav-btn" type="button" data-sidenav-tab="skills-expertise">Skills &amp; expertise</button>
             <button class="side-nav-btn" type="button" data-sidenav-tab="cv">CV</button>
             <button class="side-nav-btn" type="button" data-sidenav-tab="contact">Contact</button>
+            <button class="side-nav-btn" type="button" data-sidenav-tab="other-works">Other works</button>
         </nav>
 
         <section id="overview" class="tab-panel active" role="tabpanel" aria-labelledby="overview-tab" tabindex="0">
@@ -103,7 +105,7 @@
 
             <div class="sample-grid">
                 <!-- Each sample card stores the document title, summary, and button attributes used by the preview script. -->
-                <article class="sample-card">
+                <article class="sample-card" id="board-chair-sample" tabindex="-1">
                     <div class="sample-card-top">
                         <img class="sample-thumbnail" src="thumbnails/board-chair.png" alt="Thumbnail preview for the Board Chair Description document">
                         <div class="sample-card-content">
@@ -126,7 +128,7 @@
                     </div>
                 </article>
 
-                <article class="sample-card">
+                <article class="sample-card" id="cat-manual-sample" tabindex="-1">
                     <div class="sample-card-top">
                         <img class="sample-thumbnail" src="thumbnails/cat-manual.png" alt="Thumbnail preview for the Cat Manual document">
                         <div class="sample-card-content">
@@ -149,7 +151,7 @@
                     </div>
                 </article>
 
-                <article class="sample-card">
+                <article class="sample-card" id="ai-report-sample" tabindex="-1">
                     <div class="sample-card-top">
                         <img class="sample-thumbnail" src="thumbnails/ai-report.png" alt="Thumbnail preview for the AI Report document">
                         <div class="sample-card-content">
@@ -172,7 +174,7 @@
                     </div>
                 </article>
 
-                <article class="sample-card">
+                <article class="sample-card" id="powerpanel-sample" tabindex="-1">
                     <div class="sample-card-top">
                         <img class="sample-thumbnail" src="thumbnails/powerpanel.png" alt="Thumbnail preview for the PowerPanel Manual document">
                         <div class="sample-card-content">
@@ -331,7 +333,7 @@
         <section id="skills-expertise" class="tab-panel" role="tabpanel" aria-labelledby="skills-expertise-tab" tabindex="0" hidden>
             <div class="panel-intro">
                 <h2>Skills &amp; expertise</h2>
-                <p>These are the skills I rely on most often, with examples of how I have used them.</p>
+                <p>Each skill below points to a sample that shows that competency in context, so the evidence is easy to find quickly.</p>
             </div>
 
             <div class="work-grid">
@@ -340,70 +342,90 @@
                     <div class="work-actions">
                         <div class="work-item skill-card">
                             <div class="skill-header">
-                                <h4>Human-centered design and audience-centered argumentation</h4>
-                                <div class="skill-tools" aria-label="Software used">
-                                    <span>Microsoft Word</span>
-                                    <span>Google Docs</span>
+                                <h4>Audience analysis and role definition</h4>
+                                <div class="skill-tools" aria-label="Highlighted sample">
+                                    <span>Board Chair Description</span>
                                 </div>
                             </div>
-                            <p class="skill-summary">Human-centered design approach to clear, audience-aware argumentation.</p>
-                            <div class="skill-example">
-                                <button type="button" class="sample-btn preview-btn" data-pdf="Rhetoric%20and%20Ethics%20Portfolio.pdf">Preview Rhetoric &amp; Ethics Portfolio</button>
-                                <p class="work-caption">Example: My Rhetoric and Ethics coursework portfolio.</p>
+                            <p class="skill-summary">This sample shows how I turn informal institutional knowledge into a clear role description with usable expectations.</p>
+                            <div class="skill-links">
+                                <a class="sample-btn skill-jump" href="#board-chair-sample" data-target-tab="writing" data-target-id="board-chair-sample" data-preview-pdf="%20Board%20Chair%20Description.pdf" data-preview-page="2">See the Board Chair Description</a>
                             </div>
                         </div>
                         <div class="work-item skill-card">
                             <div class="skill-header">
-                                <h4>UI and UX communication with universal design principles</h4>
-                                <div class="skill-tools" aria-label="Software used">
-                                    <span>Adobe InDesign</span>
-                                    <span>Figma</span>
+                                <h4>Instructional writing and information organization</h4>
+                                <div class="skill-tools" aria-label="Highlighted samples">
+                                    <span>Cat Manual</span>
+                                    <span>PowerPanel Manual</span>
                                 </div>
                             </div>
-                            <p class="skill-summary">UI and UX-focused visual layouts guided by universal design.</p>
-                            <div class="skill-example">
-                                <button type="button" class="sample-btn preview-btn" data-pdf="uoclothingexchangeposter.jpg" data-gallery="uoclothingexchangeposter.jpg|POPOSTER%202.jpg|POPOSTER%201.jpg">Preview Poster Collection</button>
-                                <p class="work-caption">Example: A three-poster event series. Use the arrows in preview to browse each design.</p>
+                            <p class="skill-summary">These samples show step-by-step guidance, safety-conscious sequencing, and content organized for quick reference.</p>
+                            <div class="skill-links">
+                                <a class="sample-btn skill-jump" href="#cat-manual-sample" data-target-tab="writing" data-target-id="cat-manual-sample" data-preview-pdf="Cat%20Manual.pdf" data-preview-page="8">See the Cat Manual</a>
+                                <a class="sample-btn skill-jump" href="#powerpanel-sample" data-target-tab="writing" data-target-id="powerpanel-sample" data-preview-pdf="PowerPanel%20Manual.pdf" data-preview-page="3">See the PowerPanel Manual</a>
                             </div>
                         </div>
                         <div class="work-item skill-card">
                             <div class="skill-header">
-                                <h4>Role-specific resume tailoring and editorial positioning</h4>
-                                <div class="skill-tools" aria-label="Software used">
-                                    <span>Adobe InDesign</span>
+                                <h4>Research synthesis and analytical writing</h4>
+                                <div class="skill-tools" aria-label="Highlighted sample">
+                                    <span>AI Report</span>
                                 </div>
                             </div>
-                            <p class="skill-summary">Role-specific editing and content strategy with clear positioning.</p>
-                            <div class="skill-example">
-                                <button type="button" class="sample-btn preview-btn" data-pdf="HauskenGameEditorCV.pdf">Preview D&amp;D CV</button>
-                                <p class="work-caption">Example: A custom CV I made for a Dungeons and Dragons game editor role.</p>
+                            <p class="skill-summary">This sample shows how I organize dense information into a readable, evidence-based report with a clear structure.</p>
+                            <div class="skill-links">
+                                <a class="sample-btn skill-jump" href="#ai-report-sample" data-target-tab="writing" data-target-id="ai-report-sample" data-preview-pdf="AI%20Report.pdf" data-preview-page="2">See the AI Report</a>
                             </div>
                         </div>
                         <div class="work-item skill-card">
                             <div class="skill-header">
-                                <h4>Instructional writing and single-sourcing documentation</h4>
-                                <div class="skill-tools" aria-label="Software used">
-                                    <span>Adobe InDesign</span>
+                                <h4>Editing for clarity and document polish</h4>
+                                <div class="skill-tools" aria-label="Highlighted samples">
+                                    <span>Board Chair Description</span>
+                                    <span>AI Report</span>
                                 </div>
                             </div>
-                            <p class="skill-summary">Single-sourcing mindset for reusable, step-by-step documentation.</p>
-                            <div class="skill-example">
-                                <button type="button" class="sample-btn preview-btn" data-pdf="sourdough%20guide.pdf">Preview Sourdough Guide</button>
-                                <p class="work-caption">Example: A sourdough guide I made for a local artisan breadmaker.</p>
+                            <p class="skill-summary">These samples show revision choices that improve readability, tighten phrasing, and keep the message accessible.</p>
+                            <div class="skill-links">
+                                <a class="sample-btn skill-jump" href="#board-chair-sample" data-target-tab="writing" data-target-id="board-chair-sample" data-preview-pdf="%20Board%20Chair%20Description.pdf" data-preview-page="3">Revisit the Board Chair Description</a>
+                                <a class="sample-btn skill-jump" href="#ai-report-sample" data-target-tab="writing" data-target-id="ai-report-sample" data-preview-pdf="AI%20Report.pdf" data-preview-page="10">Revisit the AI Report</a>
                             </div>
                         </div>
-                        <div class="work-item skill-card">
-                            <div class="skill-header">
-                                <h4>Close reading, syntactic analysis, and high-precision revision</h4>
-                                <div class="skill-tools" aria-label="Software used">
-                                    <span>Microsoft Word</span>
-                                </div>
-                            </div>
-                            <p class="skill-summary">High-precision editing from sentence-level clarity to structural revision.</p>
-                            <div class="skill-example">
-                                <button type="button" class="sample-btn preview-btn" data-pdf="Award-Winning%20Essay.pdf">Preview Award-Winning Essay</button>
-                                <p class="work-caption">Example: The literary and syntactic analysis essay that won the Stephen Swig Essay Prize.</p>
-                            </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="other-works" class="tab-panel" role="tabpanel" aria-labelledby="other-works-tab" tabindex="0" hidden>
+            <div class="panel-intro">
+                <h2>Other works</h2>
+                <p>Additional projects, posters, and visual work that complement the main portfolio samples.</p>
+            </div>
+
+            <div class="work-grid">
+                <article class="info-card">
+                    <h3>Featured pieces</h3>
+                    <div class="work-actions">
+                        <div class="work-item">
+                            <button type="button" class="sample-btn preview-btn" data-pdf="Rhetoric%20and%20Ethics%20Portfolio.pdf">Preview Rhetoric &amp; Ethics Portfolio</button>
+                            <p class="work-caption">A course portfolio that showcases research synthesis, audience awareness, and structured argumentation through a sustained rhetorical analysis project.</p>
+                        </div>
+                        <div class="work-item">
+                            <button type="button" class="sample-btn preview-btn" data-pdf="uoclothingexchangeposter.jpg" data-gallery="uoclothingexchangeposter.jpg|POPOSTER%202.jpg|POPOSTER%201.jpg">Preview Poster Collection</button>
+                            <p class="work-caption">Three event posters presented in one preview to showcase layout hierarchy, visual consistency, and audience-centered design. Use the arrows to browse each poster.</p>
+                        </div>
+                        <div class="work-item">
+                            <button type="button" class="sample-btn preview-btn" data-pdf="HauskenGameEditorCV.pdf">Preview D&amp;D CV</button>
+                            <p class="work-caption">A custom-tailored CV for a Dungeons and Dragons game editor role, showing role-specific editing and concise positioning.</p>
+                        </div>
+                        <div class="work-item">
+                            <button type="button" class="sample-btn preview-btn" data-pdf="sourdough%20guide.pdf">Preview Sourdough Guide</button>
+                            <p class="work-caption">A step-by-step sourdough guide created for a local artisan breadmaker, demonstrating instructional writing and reusable documentation structure.</p>
+                        </div>
+                        <div class="work-item">
+                            <button type="button" class="sample-btn preview-btn" data-pdf="Award-Winning%20Essay.pdf">Preview Award-Winning Essay</button>
+                            <p class="work-caption">A literary and syntactic analysis essay that earned the Stephen Swig Essay Prize and demonstrates close reading, revision, and sentence-level precision.</p>
                         </div>
                     </div>
                 </article>
@@ -547,6 +569,7 @@
         const previewButtons = document.querySelectorAll('.preview-btn');
         let activeImageGallery = [];
         let activeImageIndex = 0;
+        let modalReturnTab = null;
 
         function updateImageControls() {
             const showControls = !imagePreview.hidden && activeImageGallery.length > 1;
@@ -584,10 +607,17 @@
             activeImageIndex = 0;
             updateImageControls();
             document.body.style.overflow = '';
+
+            if (modalReturnTab) {
+                const returnTab = modalReturnTab;
+                modalReturnTab = null;
+                setActiveTab(returnTab);
+            }
         }
 
-        function openModal(filePath, galleryFiles = []) {
+        function openModal(filePath, galleryFiles = [], pageNumber = null, returnTab = null) {
             const isImage = /\.(png|jpe?g|gif|webp|svg)$/i.test(filePath);
+            modalReturnTab = returnTab;
 
             if (isImage) {
                 frame.hidden = true;
@@ -597,7 +627,7 @@
             } else {
                 imagePreview.hidden = true;
                 frame.hidden = false;
-                frame.src = filePath;
+                frame.src = pageNumber ? `${filePath}#page=${pageNumber}` : filePath;
                 activeImageGallery = [];
                 activeImageIndex = 0;
                 updateImageControls();
@@ -618,6 +648,33 @@
                     .map((item) => item.trim())
                     .filter(Boolean) || [];
                 openModal(pdfPath, gallery);
+            });
+        });
+
+        document.querySelectorAll('.skill-jump').forEach((link) => {
+            link.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                const targetTab = link.getAttribute('data-target-tab');
+                const targetId = link.getAttribute('data-target-id');
+                const previewPdf = link.getAttribute('data-preview-pdf');
+                const previewPage = link.getAttribute('data-preview-page');
+
+                if (!targetTab || !targetId || !previewPdf) {
+                    return;
+                }
+
+                setActiveTab(targetTab);
+
+                requestAnimationFrame(() => {
+                    openModal(previewPdf, [], previewPage, 'skills-expertise');
+
+                    const targetElement = document.getElementById(targetId);
+
+                    if (targetElement) {
+                        targetElement.focus({ preventScroll: true });
+                    }
+                });
             });
         });
 
