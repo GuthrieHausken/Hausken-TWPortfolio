@@ -5,7 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio site for Guthrie Hausken featuring writing samples, editing experience, and a multi-tab layout.">
+    <meta name="theme-color" content="#123a64">
+    <meta property="og:title" content="Guthrie Hausken | Portfolio">
+    <meta property="og:description" content="Technical writer and editor focused on human-centered documentation. View writing samples, CV, and contact info.">
+    <meta property="og:type" content="website">
     <title>Guthrie Hausken | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -319,13 +326,18 @@
 
             <div class="contact-layout">
                 <article class="info-card">
-                    <h3>Reach out</h3>
-                    <ul class="contact-list">
-                        <li><a href="mailto:guthriehausken@gmail.com">✉ guthriehausken@gmail.com</a></li>
-
-                        <li><a href="https://www.linkedin.com/in/guthrie-hausken-1b0534365/" target="_blank" rel="noopener noreferrer">⟶ LinkedIn</a></li>
-                        <li><a href="https://github.com/GuthrieHausken" target="_blank" rel="noopener noreferrer">⌥ GitHub</a></li>
-                    </ul>
+                    <div class="work-actions">
+                        <div class="work-item skill-card contact-skill-card">
+                            <div class="skill-header">
+                                <h4>Contact</h4>
+                            </div>
+                            <div class="skill-links contact-link-group" aria-label="Contact links">
+                                <a class="contact-link" href="mailto:guthriehausken@gmail.com"><span aria-hidden="true">✉</span>guthriehausken@gmail.com</a>
+                                <a class="contact-link" href="https://www.linkedin.com/in/guthrie-hausken-1b0534365/" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">in</span>LinkedIn</a>
+                                <a class="contact-link" href="https://github.com/GuthrieHausken" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">◎</span>GitHub</a>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </div>
         </section>
